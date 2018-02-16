@@ -1,0 +1,359 @@
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.dots {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.carouselContainer {
+  width: 400px;
+  height: 200px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.left {
+  float: left;
+  height: 100%;
+  width: 40px;
+  background-color: black;
+  opacity: 0.3;
+  z-index: 100;
+  position: absolute;
+}
+
+.right {
+  float: right;
+  height: 100%;
+  width: 40px;
+  background-color: black;
+  opacity: 0.3;
+  z-index: 100;
+}
+
+.right:hover,
+.left:hover {
+  opacity: 0.6;
+  background-color: black;
+}
+
+.leftButton {
+  position: relative;
+  top: 50%;
+  left: 3px;
+}
+
+.rightButton {
+  position: relative;
+  top: 50%;
+  left: 10px;
+}
+
+.leftIcon1 {
+  width: 25px;
+  height: 5px;
+  background-color: white;
+  transform: rotate(-45deg);
+}
+.leftIcon2 {
+  width: 25px;
+  height: 5px;
+  background-color: white;
+  transform: rotate(45deg);
+  position: relative;
+  top: 10px;
+}
+
+.rightIcon1 {
+  width: 25px;
+  height: 5px;
+  background-color: white;
+  transform: rotate(45deg);
+}
+.rightIcon2 {
+  width: 25px;
+  height: 5px;
+  background-color: white;
+  transform: rotate(-45deg);
+  position: relative;
+  top: 10px;
+}
+
+.imageInit {
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.enterFromLeft {
+  display: initial;
+  animation: enterLeft 1s forwards;
+  -webkit-animation: enterLeft 1s forwards;
+  -moz-animation: enterLeft 1s forwards;
+  -ms-animation: enterLeft 1s forwards;
+  -o-animation: enterLeft 1s forwards;
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.enterFromRight {
+  display: initial;
+  animation: enterRight 1s forwards;
+  -webkit-animation: enterRight 1s forwards;
+  -moz-animation: enterRight 1s forwards;
+  -ms-animation: enterRight 1s forwards;
+  -o-animation: enterRight 1s forwards;
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.exitToLeft {
+  display: initial;
+  animation: exitLeft 1s forwards;
+  -webkit-animation: exitLeft 1s forwards;
+  -moz-animation: exitLeft 1s forwards;
+  -ms-animation: exitLeft 1s forwards;
+  -o-animation: exitLeft 1s forwards;
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.exitToRight {
+  display: initial;
+  animation: exitRight 1s forwards;
+  -webkit-animation: exitRight 1s forwards;
+  -moz-animation: exitRight 1s forwards;
+  -ms-animation: exitRight 1s forwards;
+  -o-animation: exitRight 1s forwards;
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* enterRight */
+
+@keyframes enterLeft {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes enterLeft {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes enterLeft {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes enterLeft {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes enterLeft {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+/* exitRight */
+
+@keyframes exitRight {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes exitRight {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes exitRight {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes exitRight {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes exitRight {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+/* enterFromRight */
+
+@keyframes enterRight {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes enterRight {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes enterRight {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes enterRight {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes enterRight {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+/* exitLeft */
+
+@keyframes exitLeft {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes exitLeft {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes exitLeft {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes exitLeft {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes exitLeft {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
