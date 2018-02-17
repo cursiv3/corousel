@@ -1,35 +1,31 @@
 export const moveToStart = state => {
   return Object.assign({}, state, {
-    enterMove: "enterFromRight",
+    fwdEnter: "enterFromRight",
     exitMove: "exitToLeft",
-    nextIdx: 0,
     activeDot: 0,
     isActive: false
   });
 };
 export const moveToEnd = state =>
   Object.assign({}, state, {
-    enterMove: "enterFromLeft",
+    backEnter: "enterFromLeft",
     exitMove: "exitToRight",
-    nextIdx: state.imageList.length - 1,
     activeDot: state.imageList.length - 1,
     isActive: false
   });
 
 export const forwardClick = state =>
   Object.assign({}, state, {
-    enterMove: "enterFromRight",
+    fwdEnter: "enterFromRight",
     exitMove: "exitToLeft",
-    nextIdx: state.currentIdx + 1,
     activeDot: state.currentIdx + 1,
     isActive: false
   });
 
 export const backwardClick = state =>
   Object.assign({}, state, {
-    enterMove: "enterFromLeft",
+    backEnter: "enterFromLeft",
     exitMove: "exitToRight",
-    nextIdx: state.currentIdx - 1,
     activeDot: state.currentIdx - 1,
     isActive: false
   });

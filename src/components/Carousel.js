@@ -1,5 +1,5 @@
 import React from "react";
-import { imageList } from "./imageList";
+import imageList from "./imageList";
 import PictureFrame from "./PictureFrame";
 import {
   forwardClick,
@@ -14,10 +14,12 @@ class Carousel extends React.Component {
 
     this.state = {
       imageList: imageList,
-      enterMove: "imageInit",
+      fwdEnter: "queuedImage",
+      backEnter: "queuedImage",
       exitMove: "imageInit",
+      backIdx: imageList.length - 1,
       currentIdx: 0,
-      nextIdx: "",
+      forwardIdx: 1,
       activeDot: 0,
       isActive: true
     };
@@ -29,19 +31,42 @@ class Carousel extends React.Component {
     // timeout is same length as CSS slide animation
     // so the image sliding out changes it's background
     // AFTER it's out of view
-
+    let next, back, current;
     if (evt.target.className[0] === "r") {
       // check if we're at end of array, if so show 0 again
       if (this.state.currentIdx === this.state.imageList.length - 1) {
+        next = 1;
+        current = 0;
+        back = imageList.length - 1;
         this.setState(moveToStart(this.state));
       } else {
+        back = this.state.currentIdx;
+        current = this.state.forwardIdx;
+
+        if (this.state.forwardIdx === imageList.length - 1) {
+          next = 0;
+        } else {
+          next = this.state.forwardIdx + 1;
+        }
         this.setState(forwardClick(this.state));
       }
     } else if (evt.target.className[0] === "l") {
       // check if we're at start of image array, if so show image at arr[n]
       if (this.state.currentIdx === 0) {
+        next = 0;
+        current = imageList.length - 1;
+        back = imageList.length - 2;
         this.setState(moveToEnd(this.state));
       } else {
+        next = this.state.currentIdx;
+        current = this.state.currentIdx - 1;
+
+        if (this.state.backIdx === 0) {
+          back = imageList.length - 1;
+        } else {
+          back = this.state.backIdx - 1;
+        }
+
         this.setState(backwardClick(this.state));
       }
     }
@@ -50,16 +75,20 @@ class Carousel extends React.Component {
     setTimeout(() => {
       this.setState(
         Object.assign({}, this.state, {
-          enterMove: "imageInit",
+          backEnter: "queuedImage",
+          fwdEnter: "queuedImage",
           exitMove: "imageInit",
           isActive: true,
-          currentIdx: this.state.nextIdx
+          forwardIdx: next,
+          currentIdx: current,
+          backIdx: back
         })
       );
     }, 1000);
   }
 
   render() {
+
     return (
       <PictureFrame state={this.state} carouselClick={this.carouselClick} />
     );

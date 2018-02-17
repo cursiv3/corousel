@@ -7,15 +7,15 @@ body,
 
 .dots {
   position: absolute;
-  top: 90%;
+  bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
 }
 
 .carouselContainer {
-  width: 400px;
-  height: 200px;
+  width: 600px;
+  height: 300px;
   position: relative;
   top: 50%;
   left: 50%;
@@ -91,64 +91,74 @@ body,
 }
 
 .imageInit {
-  width: 400px;
-  height: 200px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
 
+.queuedImage {
+  visibility: hidden;
+  position: absolute;
+}
+
 .enterFromLeft {
-  display: initial;
+  visibility: initial;
   animation: enterLeft 1s forwards;
   -webkit-animation: enterLeft 1s forwards;
   -moz-animation: enterLeft 1s forwards;
   -ms-animation: enterLeft 1s forwards;
   -o-animation: enterLeft 1s forwards;
-  width: 400px;
-  height: 200px;
+  width: auto;
+  height: auto;
+  max-width: 100%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .enterFromRight {
-  display: initial;
+  visibility: initial;
   animation: enterRight 1s forwards;
   -webkit-animation: enterRight 1s forwards;
   -moz-animation: enterRight 1s forwards;
   -ms-animation: enterRight 1s forwards;
   -o-animation: enterRight 1s forwards;
-  width: 400px;
-  height: 200px;
+  width: auto;
+  height: auto;
+  max-width: 100%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .exitToLeft {
-  display: initial;
+  visibility: initial;
   animation: exitLeft 1s forwards;
   -webkit-animation: exitLeft 1s forwards;
   -moz-animation: exitLeft 1s forwards;
   -ms-animation: exitLeft 1s forwards;
   -o-animation: exitLeft 1s forwards;
-  width: 400px;
-  height: 200px;
+  width: auto;
+  height: auto;
+  max-width: 100%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .exitToRight {
-  display: initial;
+  visibility: initial;
   animation: exitRight 1s forwards;
   -webkit-animation: exitRight 1s forwards;
   -moz-animation: exitRight 1s forwards;
   -ms-animation: exitRight 1s forwards;
   -o-animation: exitRight 1s forwards;
-  width: 400px;
-  height: 200px;
+  width: auto;
+  height: auto;
+  max-width: 100%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);

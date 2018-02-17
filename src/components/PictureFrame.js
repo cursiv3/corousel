@@ -7,17 +7,24 @@ const PictureFrame = props => {
   return (
     <div className="carouselContainer">
       <img
-        data-id={"entering-image"}
-        className={data.enterMove}
-        src={data.imageList[data.nextIdx]}
+        data-id={"backward-image"}
+        className={data.backEnter}
+        src={data.imageList[data.backIdx]}
         alt="carousel entering"
       />
       <img
-        data-id={"exiting-image"}
+        data-id={"current-image"}
         className={data.exitMove}
         src={data.imageList[data.currentIdx]}
         alt="carousel exiting"
       />
+      <img
+        data-id={"forward-image"}
+        className={data.fwdEnter}
+        src={data.imageList[data.forwardIdx]}
+        alt="carousel exiting"
+      />
+
       <Dots data={data.activeDot} />
 
       <div

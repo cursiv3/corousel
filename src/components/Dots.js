@@ -1,5 +1,5 @@
 import React from "react";
-import { imageList } from "./imageList";
+import imageList from "./imageList";
 
 const Dots = props => {
   return (
@@ -19,18 +19,18 @@ const Dots = props => {
             }}
           />
         ) : (
-          <div
-            key={idx}
-            style={{
-              width: "10px",
-              height: "10px",
-              margin: "0 5px 0 5px",
-              borderRadius: "100%",
-              display: "inline-block",
-              backgroundColor: "white"
-            }}
-          />
-        );
+            <div
+              key={idx}
+              style={{
+                width: "10px",
+                height: "10px",
+                margin: "0 5px 0 5px",
+                borderRadius: "100%",
+                display: "inline-block",
+                backgroundColor: "white"
+              }}
+            />
+          );
       })}
     </div>
   );
