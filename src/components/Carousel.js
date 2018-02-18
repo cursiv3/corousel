@@ -13,6 +13,8 @@ class Carousel extends React.Component {
     super();
 
     this.state = {
+      height: 400,
+      width: 600,
       imageList: imageList,
       fwdEnter: "queuedImage",
       backEnter: "queuedImage",
@@ -25,6 +27,7 @@ class Carousel extends React.Component {
     };
 
     this.carouselClick = this.carouselClick.bind(this);
+    this.sizeApi = this.sizeApi.bind(this);
   }
 
   carouselClick(evt) {
@@ -87,8 +90,27 @@ class Carousel extends React.Component {
     }, 1000);
   }
 
-  render() {
+  sizeApi() {
+    let height, width;
+    this.props.height
+      ? (height = this.props.height)
+      : (height = this.state.height);
 
+    this.props.width ? (width = this.props.width) : (width = this.state.width);
+
+    this.setState(
+      Object.assign({}, this.state, {
+        height: height,
+        width: width
+      })
+    );
+  }
+
+  componentWillMount() {
+    this.sizeApi();
+  }
+
+  render() {
     return (
       <PictureFrame state={this.state} carouselClick={this.carouselClick} />
     );
