@@ -15,6 +15,7 @@ class Carousel extends React.Component {
     this.state = {
       height: 400,
       width: 600,
+      legendType: "dots",
       imageList: imageList,
       fwdEnter: "queuedImage",
       backEnter: "queuedImage",
@@ -27,7 +28,7 @@ class Carousel extends React.Component {
     };
 
     this.carouselClick = this.carouselClick.bind(this);
-    this.sizeApi = this.sizeApi.bind(this);
+    this.carouselApi = this.carouselApi.bind(this);
   }
 
   carouselClick(evt) {
@@ -41,6 +42,7 @@ class Carousel extends React.Component {
         next = 1;
         current = 0;
         back = imageList.length - 1;
+
         this.setState(moveToStart(this.state));
       } else {
         back = this.state.currentIdx;
@@ -59,6 +61,7 @@ class Carousel extends React.Component {
         next = 0;
         current = imageList.length - 1;
         back = imageList.length - 2;
+
         this.setState(moveToEnd(this.state));
       } else {
         next = this.state.currentIdx;
@@ -90,24 +93,29 @@ class Carousel extends React.Component {
     }, 1000);
   }
 
-  sizeApi() {
-    let height, width;
+  carouselApi() {
+    let height, width, legend;
     this.props.height
       ? (height = this.props.height)
       : (height = this.state.height);
 
     this.props.width ? (width = this.props.width) : (width = this.state.width);
 
+    this.props.legend
+      ? (legend = this.props.legend)
+      : (legend = this.state.legendType);
+
     this.setState(
       Object.assign({}, this.state, {
         height: height,
-        width: width
+        width: width,
+        legendType: legend
       })
     );
   }
 
   componentWillMount() {
-    this.sizeApi();
+    this.carouselApi();
   }
 
   render() {

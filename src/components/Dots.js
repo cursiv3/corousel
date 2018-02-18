@@ -9,7 +9,7 @@ const Dots = props => {
         style={{ width: imageList.length * 20 + "px" }}
       >
         {imageList.map((val, idx) => {
-          return idx === props.data ? (
+          return idx === props.activeDot ? (
             <div
               key={idx}
               className="dots"
