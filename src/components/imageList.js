@@ -11,13 +11,9 @@ var imageList = [
   "corey-windsurf",
   "corey-snowboard4",
   "psu-soccer-coach",
-  "psu-soccer1",
-]
+  "psu-soccer1"
+];
 
-module.exports = imageList.map((name) => {
-  return "https:/d3thzr4bekqfnr.cloudfront.net/carousel/" + name + ".jpg"
+module.exports = imageList.map(name => {
+  return "https:/d3thzr4bekqfnr.cloudfront.net/carousel/" + name + ".jpg";
 });
-
-
-
-

@@ -1,11 +1,14 @@
 import React from "react";
 import Dots from "./Dots";
-import "./App.css";
+import "./carousel.css";
 
 const PictureFrame = props => {
   let data = props.state;
   return (
-    <div className="carouselContainer">
+    <div
+      className="carouselContainer"
+      style={{ width: "600px", height: "400px" }}
+    >
       <img
         data-id={"backward-image"}
         className={data.backEnter}
