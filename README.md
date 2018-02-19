@@ -1,4 +1,6 @@
-Simple photo carousel React component. Simply place photo URLs or paths into an array and pass it
+Simple photo carousel React component. 
+
+- Place photo URLs or paths into an array and pass it
 to the `images` prop on the Carousel component:
 
 ```
@@ -12,11 +14,10 @@ to the `images` prop on the Carousel component:
     <Carousel images={pictures} />
 ```
 
-And that's it!
 
 
-Default width/height are set to 600w x 400h.
-Change that using the height or width props:
+- Default width/height are set to 600w x 400h.
+- Change that using the height or width props:
 
 ```
     <Carousel images={pictures} height={300} />
