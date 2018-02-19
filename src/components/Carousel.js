@@ -9,14 +9,14 @@ import {
 } from "./slideActions";
 
 class Carousel extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       height: 400,
       width: 600,
       legendType: "dots",
-      imageList: imageList,
+      imageList: this.props.images,
       fwdEnter: "queuedImage",
       backEnter: "queuedImage",
       exitMove: "imageInit",
