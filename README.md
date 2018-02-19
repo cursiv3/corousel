@@ -1,14 +1,5 @@
-Simple photo carousel React component. Simply place photo URLs or paths into an array:
-
-```
-    var pictures = [
-        './somepath/toPic.jpg',
-        'https://www.myphotourl.com/thisPic',
-        'https://www.myphotourl.com/thisPic2'
-    ]
-```
-
-Then give that array to the `images` prop on the Carousel component:
+Simple photo carousel React component. Simply place photo URLs or paths into an array and pass it
+to the `images` prop on the Carousel component:
 
 ```
     var pictures = [
