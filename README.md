@@ -25,10 +25,9 @@ Change that using the height or width props:
     //etc
 ```
 
-The "legend" defaults to dots, but if the array is larger than 15 it changes to
-a number display in the bottom right corner.
-
-You can force this by using the ```legend``` prop on the component and setting
+- The "legend" defaults to dots 
+- If picture array is larger than 15 it changes to a number display in the bottom right corner.
+- Change to number legend by using the ```legend``` prop on the component and setting
 it to the string "numbers":
 
 ```
