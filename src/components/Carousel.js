@@ -53,6 +53,7 @@ class Carousel extends React.Component {
         } else {
           next = this.state.forwardIdx + 1;
         }
+
         this.setState(forwardClick(this.state));
       }
     } else if (evt.target.className[0] === "l") {

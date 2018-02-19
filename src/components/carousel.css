@@ -1,28 +1,40 @@
 .dotsRow {
   width: 100%;
   position: absolute;
-  top: 92%;
+  top: calc(100% - 18px);
   left: 50%;
-  transform: translateX(-50%);
   padding: 0;
-  z-index: 1000;
+  z-index: 100;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
 }
 
 .dotsCenterer {
+  max-width: 85%;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  max-width: 85%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
 }
 
 .dots {
   width: 10px;
   height: 10px;
   margin: 0 5px 0 5px;
-  border-radius: 100%;
   display: inline-block;
   box-sizing: border-box;
   border: 1px solid gray;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
 }
 
 .dotsAltRow {
@@ -40,7 +52,7 @@
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
   font-weight: bold;
   position: relative;
-  left: calc(100% - 40px);
+  left: calc(100% - 34px);
   z-index: 1000;
   padding: 0;
   margin: 0;
@@ -50,31 +62,48 @@
   position: relative;
   overflow: hidden;
   background-color: #161616;
+  box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.7);
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
 }
 
 .left {
   float: left;
   height: 100%;
-  width: 40px;
-  background-color: black;
-  opacity: 0.3;
+  width: 30px;
   z-index: 100;
   position: absolute;
+  opacity: 0.2;
+  background-color: black;
+  transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
 }
 
 .right {
-  float: right;
+  position: absolute;
+  left: calc(100% - 30px);
   height: 100%;
-  width: 40px;
-  background-color: black;
-  opacity: 0.3;
+  width: 30px;
   z-index: 100;
+  opacity: 0.2;
+  background-color: black;
+  transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
 }
 
 .right:hover,
 .left:hover {
-  opacity: 0.6;
-  background-color: black;
+  opacity: 0.5;
+  cursor: pointer;
 }
 
 .leftButton {
@@ -86,7 +115,7 @@
 .rightButton {
   position: relative;
   top: 50%;
-  left: 10px;
+  left: 3px;
 }
 
 .leftIcon1 {
@@ -94,14 +123,22 @@
   height: 5px;
   background-color: white;
   transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
 }
 .leftIcon2 {
   width: 25px;
   height: 5px;
   background-color: white;
-  transform: rotate(45deg);
   position: relative;
   top: 10px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
 }
 
 .rightIcon1 {
@@ -109,14 +146,22 @@
   height: 5px;
   background-color: white;
   transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
 }
 .rightIcon2 {
   width: 25px;
   height: 5px;
   background-color: white;
-  transform: rotate(-45deg);
   position: relative;
   top: 10px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
 }
 
 .imageInit {
@@ -126,6 +171,10 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
 }
 
 .queuedImage {
@@ -135,62 +184,78 @@
 
 .enterFromLeft {
   visibility: initial;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
   animation: enterLeft 1s forwards;
   -webkit-animation: enterLeft 1s forwards;
   -moz-animation: enterLeft 1s forwards;
   -ms-animation: enterLeft 1s forwards;
   -o-animation: enterLeft 1s forwards;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.enterFromRight {
+  visibility: initial;
   width: auto;
   height: auto;
   max-width: 100%;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-}
-
-.enterFromRight {
-  visibility: initial;
   animation: enterRight 1s forwards;
   -webkit-animation: enterRight 1s forwards;
   -moz-animation: enterRight 1s forwards;
   -ms-animation: enterRight 1s forwards;
   -o-animation: enterRight 1s forwards;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.exitToLeft {
+  visibility: initial;
   width: auto;
   height: auto;
   max-width: 100%;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-}
-
-.exitToLeft {
-  visibility: initial;
   animation: exitLeft 1s forwards;
   -webkit-animation: exitLeft 1s forwards;
   -moz-animation: exitLeft 1s forwards;
   -ms-animation: exitLeft 1s forwards;
   -o-animation: exitLeft 1s forwards;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.exitToRight {
+  visibility: initial;
   width: auto;
   height: auto;
   max-width: 100%;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-}
-
-.exitToRight {
-  visibility: initial;
   animation: exitRight 1s forwards;
   -webkit-animation: exitRight 1s forwards;
   -moz-animation: exitRight 1s forwards;
   -ms-animation: exitRight 1s forwards;
   -o-animation: exitRight 1s forwards;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  position: absolute;
-  top: 50%;
   transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
 }
 
 /* enterRight */

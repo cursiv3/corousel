@@ -8,7 +8,7 @@ const DotsAlt = props => {
       <hr
         style={{
           width: "20px",
-          left: "calc(100% - 30px)",
+          left: "calc(100% - 25px)",
           position: "absolute"
         }}
       />
