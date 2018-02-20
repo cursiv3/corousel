@@ -8,18 +8,18 @@ const PictureFrame = props => {
 
   const legendHandler = () => {
     if (data.legendType === "numbers") {
-      return <DotsAlt activeDot={data.activeDot} />;
+      return <DotsAlt state={data} />;
     } else if (data.imageList.length > 15) {
-      return <DotsAlt activeDot={data.activeDot} />;
+      return <DotsAlt state={data} />;
     } else {
-      return <Dots activeDot={data.activeDot} />;
+      return <Dots state={data} />;
     }
   };
 
   return (
     <div
       className="carouselContainer"
-      style={{ width: data.width + "px", height: data.height + "px" }}
+      style={{ width: `${data.width}px`, height: `${data.height}px` }}
     >
       <img
         data-id={"backward-image"}

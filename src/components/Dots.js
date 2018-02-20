@@ -1,15 +1,15 @@
 import React from "react";
-import imageList from "./imageList";
 
 const Dots = props => {
+  var data = props.state;
   return (
     <div className="dotsRow">
       <div
         className="dotsCenterer"
-        style={{ width: imageList.length * 20 + "px" }}
+        style={{ width: `${data.imageList.length * 20}px` }}
       >
-        {imageList.map((val, idx) => {
-          return idx === props.activeDot ? (
+        {data.imageList.map((val, idx) => {
+          return idx === data.activeDot ? (
             <div
               key={idx}
               className="dots"
@@ -20,14 +20,14 @@ const Dots = props => {
               }}
             />
           ) : (
-            <div
-              key={idx}
-              className="dots"
-              style={{
-                backgroundColor: "white"
-              }}
-            />
-          );
+              <div
+                key={idx}
+                className="dots"
+                style={{
+                  backgroundColor: "white"
+                }}
+              />
+            );
         })}
       </div>
     </div>

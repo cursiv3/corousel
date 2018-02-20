@@ -1,5 +1,4 @@
 import React from "react";
-import imageList from "./imageList";
 
 const DotsAlt = props => {
   return (
@@ -13,7 +12,7 @@ const DotsAlt = props => {
         }}
       />
       <br />
-      <p className="dotsAltP">{imageList.length}</p>
+      <p className="dotsAltP">{props.imageList.length}</p>
     </div>
   );
 };
