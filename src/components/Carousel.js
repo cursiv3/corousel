@@ -9,11 +9,26 @@ import {
 } from "./slideActions";
 
 class Carousel extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      height: 400,
+      width: 600,
+      legendType: "dots",
+      imageList: this.props.images,
+      fwdEnter: "queuedImage",
+      backEnter: "queuedImage",
+      exitMove: "imageInit",
+      backIdx: imageList.length - 1,
+      currentIdx: 0,
       forwardIdx: 1,
       activeDot: 0,
       isActive: true
     };
 
+    this.carouselClick = this.carouselClick.bind(this);
+    this.carouselApi = this.carouselApi.bind(this);
   }
 
   carouselClick(evt) {
@@ -27,6 +42,7 @@ class Carousel extends React.Component {
         next = 1;
         current = 0;
         back = imageList.length - 1;
+
         this.setState(moveToStart(this.state));
       } else {
         back = this.state.currentIdx;
@@ -37,6 +53,7 @@ class Carousel extends React.Component {
         } else {
           next = this.state.forwardIdx + 1;
         }
+
         this.setState(forwardClick(this.state));
       }
     } else if (evt.target.className[0] === "l") {
@@ -45,6 +62,7 @@ class Carousel extends React.Component {
         next = 0;
         current = imageList.length - 1;
         back = imageList.length - 2;
+
         this.setState(moveToEnd(this.state));
       } else {
         next = this.state.currentIdx;
@@ -76,7 +94,6 @@ class Carousel extends React.Component {
     }, 1000);
   }
 
-<<<<<<< HEAD
   carouselApi() {
     let height, width, legend;
     this.props.height
@@ -103,10 +120,6 @@ class Carousel extends React.Component {
   }
 
   render() {
-=======
-  render() {
-
->>>>>>> 7360d0d69159572477290d4e81db846c208d455e
     return (
       <PictureFrame state={this.state} carouselClick={this.carouselClick} />
     );

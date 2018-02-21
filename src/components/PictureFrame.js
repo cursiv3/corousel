@@ -1,11 +1,26 @@
 import React from "react";
 import Dots from "./Dots";
-import "./App.css";
+import DotsAlt from "./DotsAlt";
+import "./carousel.css";
 
 const PictureFrame = props => {
   let data = props.state;
+
+  const legendHandler = () => {
+    if (data.legendType === "numbers") {
+      return <DotsAlt activeDot={data.activeDot} />;
+    } else if (data.imageList.length > 15) {
+      return <DotsAlt activeDot={data.activeDot} />;
+    } else {
+      return <Dots activeDot={data.activeDot} />;
+    }
+  };
+
   return (
-    <div className="carouselContainer">
+    <div
+      className="carouselContainer"
+      style={{ width: data.width + "px", height: data.height + "px" }}
+    >
       <img
         data-id={"backward-image"}
         className={data.backEnter}
@@ -25,7 +40,7 @@ const PictureFrame = props => {
         alt="carousel exiting"
       />
 
-      <Dots data={data.activeDot} />
+      {legendHandler()}
 
       <div
         className="left"
