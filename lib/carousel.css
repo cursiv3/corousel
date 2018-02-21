@@ -1,4 +1,4 @@
-.dotsRow {
+.corouselDotsRow {
   width: 100%;
   position: absolute;
   top: calc(100% - 18px);
@@ -12,7 +12,7 @@
   -o-transform: translateX(-50%);
 }
 
-.dotsCenterer {
+.corouselDotsCenterer {
   max-width: 85%;
   position: relative;
   left: 50%;
@@ -23,7 +23,7 @@
   -o-transform: translateX(-50%);
 }
 
-.dots {
+.corouselDots {
   width: 10px;
   height: 10px;
   margin: 0 5px 0 5px;
@@ -37,7 +37,7 @@
   -o-border-radius: 100%;
 }
 
-.dotsAltRow {
+.corouselDotsAltRow {
   position: absolute;
   color: white;
   width: 100%;
@@ -45,7 +45,7 @@
   padding: 0;
 }
 
-.dotsAltP {
+.corouselDotsAltP {
   text-align: center;
   width: 40px;
   font-size: 16px;
@@ -58,7 +58,7 @@
   margin: 0;
 }
 
-.carouselContainer {
+.corouselContainer {
   position: relative;
   overflow: hidden;
   background-color: #161616;
@@ -70,7 +70,7 @@
   -o-border-radius: 2px;
 }
 
-.left {
+.corouselLeft {
   float: left;
   height: 100%;
   width: 30px;
@@ -85,7 +85,7 @@
   -o-transition: opacity 0.5s ease-in-out;
 }
 
-.right {
+.corouselRight {
   position: absolute;
   left: calc(100% - 30px);
   height: 100%;
@@ -100,25 +100,25 @@
   -o-transition: opacity 0.5s ease-in-out;
 }
 
-.right:hover,
-.left:hover {
+.corouselRight:hover,
+.corouselLeft:hover {
   opacity: 0.5;
   cursor: pointer;
 }
 
-.leftButton {
+.corouselLeftButton {
   position: relative;
   top: 50%;
   left: 3px;
 }
 
-.rightButton {
+.corouselRightButton {
   position: relative;
   top: 50%;
   left: 3px;
 }
 
-.leftIcon1 {
+.corouselLeftIcon1 {
   width: 25px;
   height: 5px;
   background-color: white;
@@ -128,7 +128,7 @@
   -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
 }
-.leftIcon2 {
+.corouselLeftIcon2 {
   width: 25px;
   height: 5px;
   background-color: white;
@@ -141,7 +141,7 @@
   -o-transform: rotate(45deg);
 }
 
-.rightIcon1 {
+.corouselRightIcon1 {
   width: 25px;
   height: 5px;
   background-color: white;
@@ -151,7 +151,7 @@
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
 }
-.rightIcon2 {
+.corouselRightIcon2 {
   width: 25px;
   height: 5px;
   background-color: white;
@@ -164,7 +164,7 @@
   -o-transform: rotate(-45deg);
 }
 
-.imageInit {
+.corouselImageInit {
   max-width: 100%;
   width: auto;
   height: auto;
@@ -177,23 +177,23 @@
   -o-transform: translateY(-50%);
 }
 
-.queuedImage {
+.corouselQueuedImage {
   visibility: hidden;
   position: absolute;
 }
 
-.enterFromLeft {
+.corouselEnterFromLeft {
   visibility: initial;
   width: auto;
   height: auto;
   max-width: 100%;
   position: absolute;
   top: 50%;
-  animation: enterLeft 1s forwards;
-  -webkit-animation: enterLeft 1s forwards;
-  -moz-animation: enterLeft 1s forwards;
-  -ms-animation: enterLeft 1s forwards;
-  -o-animation: enterLeft 1s forwards;
+  animation: corouselEnterLeft 1s forwards;
+  -webkit-animation: corouselEnterLeft 1s forwards;
+  -moz-animation: corouselEnterLeft 1s forwards;
+  -ms-animation: corouselEnterLeft 1s forwards;
+  -o-animation: corouselEnterLeft 1s forwards;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -201,18 +201,18 @@
   -o-transform: translateY(-50%);
 }
 
-.enterFromRight {
+.corouselEnterFromRight {
   visibility: initial;
   width: auto;
   height: auto;
   max-width: 100%;
   position: absolute;
   top: 50%;
-  animation: enterRight 1s forwards;
-  -webkit-animation: enterRight 1s forwards;
-  -moz-animation: enterRight 1s forwards;
-  -ms-animation: enterRight 1s forwards;
-  -o-animation: enterRight 1s forwards;
+  animation: corouselEnterRight 1s forwards;
+  -webkit-animation: corouselEnterRight 1s forwards;
+  -moz-animation: corouselEnterRight 1s forwards;
+  -ms-animation: corouselEnterRight 1s forwards;
+  -o-animation: corouselEnterRight 1s forwards;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -220,18 +220,18 @@
   -o-transform: translateY(-50%);
 }
 
-.exitToLeft {
+.corouselExitToLeft {
   visibility: initial;
   width: auto;
   height: auto;
   max-width: 100%;
   position: absolute;
   top: 50%;
-  animation: exitLeft 1s forwards;
-  -webkit-animation: exitLeft 1s forwards;
-  -moz-animation: exitLeft 1s forwards;
-  -ms-animation: exitLeft 1s forwards;
-  -o-animation: exitLeft 1s forwards;
+  animation: corouselExitLeft 1s forwards;
+  -webkit-animation: corouselExitLeft 1s forwards;
+  -moz-animation: corouselExitLeft 1s forwards;
+  -ms-animation: corouselExitLeft 1s forwards;
+  -o-animation: corouselExitLeft 1s forwards;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -239,18 +239,18 @@
   -o-transform: translateY(-50%);
 }
 
-.exitToRight {
+.corouselExitToRight {
   visibility: initial;
   width: auto;
   height: auto;
   max-width: 100%;
   position: absolute;
   top: 50%;
-  animation: exitRight 1s forwards;
-  -webkit-animation: exitRight 1s forwards;
-  -moz-animation: exitRight 1s forwards;
-  -ms-animation: exitRight 1s forwards;
-  -o-animation: exitRight 1s forwards;
+  animation: corouselExitRight 1s forwards;
+  -webkit-animation: corouselExitRight 1s forwards;
+  -moz-animation: corouselExitRight 1s forwards;
+  -ms-animation: corouselExitRight 1s forwards;
+  -o-animation: corouselExitRight 1s forwards;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -258,9 +258,9 @@
   -o-transform: translateY(-50%);
 }
 
-/* enterRight */
+/* corouselEnterRight */
 
-@keyframes enterLeft {
+@keyframes corouselEnterLeft {
   from {
     left: -100%;
     opacity: 0;
@@ -272,7 +272,7 @@
 }
 
 /* Firefox < 16 */
-@-moz-keyframes enterLeft {
+@-moz-keyframes corouselEnterLeft {
   from {
     left: -100%;
     opacity: 0;
@@ -284,7 +284,7 @@
 }
 
 /* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes enterLeft {
+@-webkit-keyframes corouselEnterLeft {
   from {
     left: -100%;
     opacity: 0;
@@ -296,7 +296,7 @@
 }
 
 /* Internet Explorer */
-@-ms-keyframes enterLeft {
+@-ms-keyframes corouselEnterLeft {
   from {
     left: -100%;
     opacity: 0;
@@ -308,7 +308,7 @@
 }
 
 /* Opera < 12.1 */
-@-o-keyframes enterLeft {
+@-o-keyframes corouselEnterLeft {
   from {
     left: -100%;
     opacity: 0;
@@ -319,9 +319,9 @@
   }
 }
 
-/* exitRight */
+/* corouselExitRight */
 
-@keyframes exitRight {
+@keyframes corouselExitRight {
   from {
     left: 0;
     opacity: 1;
@@ -333,7 +333,7 @@
 }
 
 /* Firefox < 16 */
-@-moz-keyframes exitRight {
+@-moz-keyframes corouselExitRight {
   from {
     left: 0;
     opacity: 1;
@@ -345,7 +345,7 @@
 }
 
 /* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes exitRight {
+@-webkit-keyframes corouselExitRight {
   from {
     left: 0;
     opacity: 1;
@@ -357,7 +357,7 @@
 }
 
 /* Internet Explorer */
-@-ms-keyframes exitRight {
+@-ms-keyframes corouselExitRight {
   from {
     left: 0;
     opacity: 1;
@@ -369,7 +369,7 @@
 }
 
 /* Opera < 12.1 */
-@-o-keyframes exitRight {
+@-o-keyframes corouselExitRight {
   from {
     left: 0;
     opacity: 1;
@@ -382,7 +382,7 @@
 
 /* enterFromRight */
 
-@keyframes enterRight {
+@keyframes corouselEnterRight {
   from {
     left: 100%;
     opacity: 0;
@@ -394,7 +394,7 @@
 }
 
 /* Firefox < 16 */
-@-moz-keyframes enterRight {
+@-moz-keyframes corouselEnterRight {
   from {
     left: 100%;
     opacity: 0;
@@ -406,7 +406,7 @@
 }
 
 /* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes enterRight {
+@-webkit-keyframes corouselEnterRight {
   from {
     left: 100%;
     opacity: 0;
@@ -418,7 +418,7 @@
 }
 
 /* Internet Explorer */
-@-ms-keyframes enterRight {
+@-ms-keyframes corouselEnterRight {
   from {
     left: 100%;
     opacity: 0;
@@ -430,7 +430,7 @@
 }
 
 /* Opera < 12.1 */
-@-o-keyframes enterRight {
+@-o-keyframes corouselEnterRight {
   from {
     left: 100%;
     opacity: 0;
@@ -443,7 +443,7 @@
 
 /* exitLeft */
 
-@keyframes exitLeft {
+@keyframes corouselExitLeft {
   from {
     left: 0;
     opacity: 1;
@@ -455,7 +455,7 @@
 }
 
 /* Firefox < 16 */
-@-moz-keyframes exitLeft {
+@-moz-keyframes corouselExitLeft {
   from {
     left: 0;
     opacity: 1;
@@ -467,7 +467,7 @@
 }
 
 /* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes exitLeft {
+@-webkit-keyframes corouselExitLeft {
   from {
     left: 0;
     opacity: 1;
@@ -479,7 +479,7 @@
 }
 
 /* Internet Explorer */
-@-ms-keyframes exitLeft {
+@-ms-keyframes corouselExitLeft {
   from {
     left: 0;
     opacity: 1;
@@ -491,7 +491,7 @@
 }
 
 /* Opera < 12.1 */
-@-o-keyframes exitLeft {
+@-o-keyframes corouselExitLeft {
   from {
     left: 0;
     opacity: 1;
