@@ -1,3 +1,16 @@
+.corouselContainer {
+  position: relative;
+  overflow: hidden;
+  background-color: #161616;
+  box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.7);
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  text-align: left !important;
+}
+
 .corouselDotsRow {
   width: 100%;
   position: absolute;
@@ -56,18 +69,6 @@
   z-index: 1000;
   padding: 0;
   margin: 0;
-}
-
-.corouselContainer {
-  position: relative;
-  overflow: hidden;
-  background-color: #161616;
-  box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.7);
-  border-radius: 2px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
 }
 
 .corouselLeft {
@@ -166,6 +167,7 @@
 
 .corouselImageInit {
   max-width: 100%;
+  text-align: left !important;
   width: auto;
   height: auto;
   position: absolute;
