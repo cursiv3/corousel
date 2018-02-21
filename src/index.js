@@ -1,15 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Carousel from "./components/Carousel";
-import imageList from "./components/imageList";
 
 var tester = [
-  "https://cdn.pixabay.com/photo/2018/01/28/14/41/bird-3113835_960_720.jpg",
-  "https://cdn.pixabay.com/photo/2018/01/31/16/27/sea-3121435_960_720.jpg",
-  "https://cdn.pixabay.com/photo/2018/01/31/12/16/architecture-3121009_960_720.jpg",
-  "https://cdn.pixabay.com/photo/2018/01/19/09/31/kirkjufell-3092048_960_720.jpg",
-  "https://cdn.pixabay.com/photo/2018/02/07/14/27/pension-3137209_960_720.jpg",
-  "https://cdn.pixabay.com/photo/2017/11/15/20/17/beach-2952391_960_720.jpg"
+  "https://kids.nationalgeographic.com/content/dam/kids/photos/States/A-I/hawaii-beach.ngsversion.1486588699914.adapt.1900.1.png",
+  "https://d3atagt0rnqk7k.cloudfront.net/wp-content/uploads/2017/07/20170730/oregon-road-trip-1.jpg",
+  "http://cdn.akamai.steamstatic.com/steam/apps/730/ss_ccc4ce6edd4c454b6ce7b0757e633b63aa93921d.1920x1080.jpg?t=1513742714",
+  "https://i.ytimg.com/vi/XPJC7A6Gqtk/maxresdefault.jpg"
 ];
 
-ReactDOM.render(<Carousel images={tester} />, document.getElementById("root"));
+ReactDOM.render(<Carousel />, document.getElementById("root"));

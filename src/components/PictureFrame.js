@@ -8,11 +8,11 @@ const PictureFrame = props => {
 
   const legendHandler = () => {
     if (data.legendType === "numbers") {
-      return <DotsAlt activeDot={data.activeDot} />;
+      return <DotsAlt data={data} />;
     } else if (data.imageList.length > 15) {
-      return <DotsAlt activeDot={data.activeDot} />;
+      return <DotsAlt data={data} />;
     } else {
-      return <Dots activeDot={data.activeDot} />;
+      return <Dots data={data} />;
     }
   };
 
