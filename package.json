@@ -1,6 +1,6 @@
 {
   "name": "corousel",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Simple react photo carousel",
   "main": "lib/Carousel.js",
   "dependencies": {
@@ -21,8 +21,11 @@
     "lib": "babel src/components --out-dir lib --copy-files",
     "eject": "react-scripts eject"
   },
-  "keywords": ["react", "carousel", "image carousel"],
-  "author":
-    "Corey Lewis <lewisc503@gmail.com> (https://github.com/cursiv3/corousel)",
+  "keywords": [
+    "react",
+    "carousel",
+    "image carousel"
+  ],
+  "author": "Corey Lewis <lewisc503@gmail.com> (https://github.com/cursiv3/corousel)",
   "license": "MIT"
 }
