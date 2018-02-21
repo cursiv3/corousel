@@ -23,5 +23,6 @@
   },
   "keywords": ["react", "carousel", "image carousel"],
   "author":
-    "Corey Lewis <lewisc503@gmail.com> (https://github.com/cursiv3/corousel)"
+    "Corey Lewis <lewisc503@gmail.com> (https://github.com/cursiv3/corousel)",
+  "license": "MIT"
 }
