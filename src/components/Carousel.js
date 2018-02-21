@@ -16,9 +16,9 @@ class Carousel extends React.Component {
       width: 600,
       legendType: "dots",
       imageList: typeof this.props.images === "object" ? this.props.images : 0,
-      fwdEnter: "queuedImage",
-      backEnter: "queuedImage",
-      exitMove: "imageInit",
+      fwdEnter: "corouselQueuedImage",
+      backEnter: "corouselQueuedImage",
+      exitMove: "corouselImageInit",
       backIdx:
         typeof this.props.images === "object"
           ? this.props.images.length - 1
@@ -38,7 +38,7 @@ class Carousel extends React.Component {
     // so the image sliding out changes it's background
     // AFTER it's out of view
     let next, back, current;
-    if (evt.target.className[0] === "r") {
+    if (evt.target.className[8] === "R") {
       // check if we're at end of array, if so show 0 again
       if (this.state.currentIdx === this.state.imageList.length - 1) {
         next = 1;
@@ -58,7 +58,7 @@ class Carousel extends React.Component {
 
         this.setState(forwardClick(this.state));
       }
-    } else if (evt.target.className[0] === "l") {
+    } else if (evt.target.className[8] === "L") {
       // check if we're at start of image array, if so show image at arr[n]
       if (this.state.currentIdx === 0) {
         next = 0;
@@ -84,9 +84,9 @@ class Carousel extends React.Component {
     setTimeout(() => {
       this.setState(
         Object.assign({}, this.state, {
-          backEnter: "queuedImage",
-          fwdEnter: "queuedImage",
-          exitMove: "imageInit",
+          backEnter: "corouselQueuedImage",
+          fwdEnter: "corouselQueuedImage",
+          exitMove: "corouselImageInit",
           isActive: true,
           forwardIdx: next,
           currentIdx: current,

@@ -18,7 +18,7 @@ const PictureFrame = props => {
 
   return (
     <div
-      className="carouselContainer"
+      className="corouselContainer"
       style={{ width: data.width + "px", height: data.height + "px" }}
     >
       <img
@@ -43,30 +43,30 @@ const PictureFrame = props => {
       {legendHandler()}
 
       <div
-        className="left"
+        className="corouselLeft"
         onClick={evt => {
           if (data.isActive) {
             props.carouselClick(evt);
           }
         }}
       >
-        <div className="leftButton">
-          <div className="leftIcon1" />
-          <div className="leftIcon2" />
+        <div className="corouselLeftButton">
+          <div className="corouselLeftIcon1" />
+          <div className="corouselLeftIcon2" />
         </div>
       </div>
 
       <div
-        className="right"
+        className="corouselRight"
         onClick={evt => {
           if (data.isActive) {
             props.carouselClick(evt);
           }
         }}
       >
-        <div className="rightButton">
-          <div className="rightIcon1" />
-          <div className="rightIcon2" />
+        <div className="corouselRightButton">
+          <div className="corouselRightIcon1" />
+          <div className="corouselRightIcon2" />
         </div>
       </div>
     </div>

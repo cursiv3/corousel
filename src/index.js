@@ -9,4 +9,4 @@ var tester = [
   "https://i.ytimg.com/vi/XPJC7A6Gqtk/maxresdefault.jpg"
 ];
 
-ReactDOM.render(<Carousel />, document.getElementById("root"));
+ReactDOM.render(<Carousel images={tester} />, document.getElementById("root"));

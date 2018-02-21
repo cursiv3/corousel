@@ -2,16 +2,16 @@ import React from "react";
 
 const Dots = props => {
   return (
-    <div className="dotsRow">
+    <div className="corouselDotsRow">
       <div
-        className="dotsCenterer"
+        className="corouselDotsCenterer"
         style={{ width: props.data.imageList.length * 20 + "px" }}
       >
         {props.data.imageList.map((val, idx) => {
           return idx === props.data.activeDot ? (
             <div
               key={idx}
-              className="dots"
+              className="corouselDots"
               style={{
                 border: "none",
                 backgroundColor: "red",
@@ -21,7 +21,7 @@ const Dots = props => {
           ) : (
             <div
               key={idx}
-              className="dots"
+              className="corouselDots"
               style={{
                 backgroundColor: "white"
               }}
