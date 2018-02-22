@@ -16,13 +16,17 @@ to the `images` prop on the Carousel component:
 
 
 
-- Default width/height are set to 600w x 400h.
+- Default width/height are set to 100%.
 - Change that using the height or width props:
 
 ```
-    <Carousel images={pictures} height={300} />
-    <Carousel images={pictures} width={1500} />
-    <Carousel images={pictures} height={300} width={1500} />
+    <Carousel images={pictures} height={'300px'} width={'70%'} />
+    ...
+    <Carousel images={pictures} width={'1500px'} />
+    ...
+    <Carousel images={pictures} height={'600px'} />
+    ...
+    <Carousel images={pictures} height={'50%'} width={1500} />
     //etc
 ```
 
