@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Carousel from "./components/Carousel";
+import "./test.css";
 
 var tester = [
   "https://kids.nationalgeographic.com/content/dam/kids/photos/States/A-I/hawaii-beach.ngsversion.1486588699914.adapt.1900.1.png",
@@ -9,4 +10,4 @@ var tester = [
   "https://i.ytimg.com/vi/XPJC7A6Gqtk/maxresdefault.jpg"
 ];
 
-ReactDOM.render(<Carousel images={tester} />, document.getElementById("root"));
+ReactDOM.render(<Carousel images={tester} width={'50%'} height={'400px'} />, document.getElementById("root"));

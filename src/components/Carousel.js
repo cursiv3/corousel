@@ -12,8 +12,8 @@ class Carousel extends React.Component {
     super(props);
 
     this.state = {
-      height: 400,
-      width: 600,
+      height: '100%',
+      width: '100%',
       legendType: "dots",
       imageList: typeof this.props.images === "object" ? this.props.images : 0,
       fwdEnter: "corouselQueuedImage",

@@ -19,7 +19,7 @@ const PictureFrame = props => {
   return (
     <div
       className="corouselContainer"
-      style={{ width: data.width + "px", height: data.height + "px" }}
+      style={{ width: data.width, height: data.height }}
     >
       <img
         data-id={"backward-image"}
