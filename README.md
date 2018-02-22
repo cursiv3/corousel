@@ -1,5 +1,9 @@
 Simple photo carousel React component. 
 
+To install: 
+
+npm i --save corousel
+
 - Place photo URLs or paths into an array and pass it
 to the `images` prop on the Carousel component:
 
