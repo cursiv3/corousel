@@ -1,6 +1,6 @@
 {
   "name": "corousel",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Simple react photo carousel",
   "main": "lib/Carousel.js",
   "dependencies": {
