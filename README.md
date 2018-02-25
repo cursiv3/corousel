@@ -8,12 +8,13 @@ npm i --save corousel
 to the `images` prop on the Carousel component:
 
 ```
+    import Carousel from "corousel";
+    
     var pictures = [
         './somepath/toPic.jpg',
         'https://www.myphotourl.com/thisPic',
         'https://www.myphotourl.com/thisPic2'
     ];
-
 
     <Carousel images={pictures} />
 ```
